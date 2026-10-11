@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 
+from app.api.rxnorm import router as rxnorm_router
+
 app = FastAPI(
     title="MedGuard AI",
     description=(
@@ -7,6 +9,7 @@ app = FastAPI(
     ),
     version="0.1.0",
 )
+app.include_router(rxnorm_router)
 
 
 @app.get("/", tags=["System"])
