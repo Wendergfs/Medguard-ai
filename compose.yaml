@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: medguard-api
+    ports:
+      - "8000:8000"
+    environment:
+      APP_NAME: MedGuard AI
+      APP_ENV: development
+      LOG_LEVEL: INFO
+    volumes:
+      - ./app:/app/app
+      - ./tests:/app/tests
+    restart: unless-stopped
