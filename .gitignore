@@ -26,7 +26,8 @@ htmlcov/
 # Local data
 data/*
 !data/.gitkeep
-
+app/services/datawork/*.json
+app/services/datawork/*.jsonl
 # Logs
 *.log
 
