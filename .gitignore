@@ -23,11 +23,17 @@ htmlcov/
 .env.*
 !.env.example
 
-# Local data
-data/*
-!data/.gitkeep
+# Local datasets and generated outputs
+/data/*
+!/data/.gitkeep
 app/services/datawork/*.json
 app/services/datawork/*.jsonl
+app/services/datawork/*_sample.csv
+
+# Local diagnostic logs can contain machine paths, SQL, and data excerpts
+/import_error.txt
+/details.md
+
 # Logs
 *.log
 
